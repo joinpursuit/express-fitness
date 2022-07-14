@@ -1,10 +1,6 @@
 const express = require("express");
 const app = express();
 
-app.get("/", (req, res) => {
-  res.send("Hello, world!");
-});
-
 const locationsController = require("./controllers/locations.controller");
 app.use("/locations", locationsController);
 
@@ -19,5 +15,9 @@ app.use("/special-events", specialEventsController);
 
 const plansController = require("./controllers/plans.controller");
 app.use("/plans", plansController);
+
+app.get("/", (req, res) => {
+  res.send("Hello, world!");
+});
 
 module.exports = app;
