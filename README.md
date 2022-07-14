@@ -118,7 +118,7 @@ For each model, make a folder with the appropriate file name. For example, for t
     name: "Amandine",
     role: "member",
     plan: "silver",
-    mainLocation: "10011",
+    mainLocation: "11011",
   },
 ];
 ```
@@ -246,12 +246,12 @@ Create a `GET` route at `/locations/people` that organizes each person according
     city: "New York",
     state: "NY",
     zip: "11011",
-    members: [
+    people: [
       {
         name: "Amandine",
         role: "member",
         plan: "silver",
-        mainLocation: "10011",
+        mainLocation: "11011",
       },
     ],
   },
