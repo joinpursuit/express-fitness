@@ -2,7 +2,7 @@ const express = require('express');
 
 const app = express();
 
-const locationController = require('../express-fitness/controllers/locations.controller');
+const locationController = require('../express-fitness/controllers/locations.controller')
 
 const personController = require('../express-fitness/controllers/persons.controller');
 
