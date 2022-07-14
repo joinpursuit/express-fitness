@@ -2,15 +2,15 @@ const express = require('express');
 
 const app = express();
 
-const locationController = require('../express-fitness/controllers/locations.controller')
+const locationController = require('./controllers/locations.controller')
 
-const personController = require('../express-fitness/controllers/persons.controller');
+const personController = require('./controllers/persons.controller');
 
-const planController = require('../express-fitness/controllers/plans.controller');
+const planController = require('./controllers/plans.controller');
 
-const machineController = require('../express-fitness/controllers/machines.controller');
+const machineController = require('./controllers/machines.controller');
 
-const specialEventsController = require('../express-fitness/controllers/special-events.controller');
+const specialEventsController = require('./controllers/special-events.controller');
 
 app.get('/', (request, response) => {
   response.send('Hello, world!');
