@@ -8,10 +8,10 @@ locations.get("/", (req, res) => {
 });
 locations.get("/people", (req, res) => {
   let peopleArrayWithLocations = locationsArray.map((location) => {
-    let perpleArrayFilter = peopleArray.filter((person) => {
+    let peopleArrayFilter = peopleArray.filter((person) => {
       return person.mainLocation === location.zip;
     });
-    location.people = perpleArrayFilter;
+    location.people = peopleArrayFilter;
     return location;
   });
 
