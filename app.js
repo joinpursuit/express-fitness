@@ -13,7 +13,7 @@ const machineController = require('../express-fitness/controllers/machines.contr
 const specialEventsController = require('../express-fitness/controllers/special-events.controller');
 
 app.get('/', (request, response) => {
-  response.send('Hello 👋🏽 , WORLD 🌎!');
+  response.send('Hello, world!');
 });
 
 app.use('/locations', locationController);
@@ -27,7 +27,7 @@ app.use('/machines', machineController);
 app.use('/special-events', specialEventsController);
 
 app.use('*', (request, response) => {
-  response.status(404).send('OOPS!👻 Nothing to see here!');
+  response.status(404).send('OOPS! Nothing to see here!');
 });
 
 module.exports = app;
