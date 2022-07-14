@@ -18,7 +18,7 @@ app.use("/special-events", specialEventsController);
 app.use("*", (req, res) => {
   res
     .status(404)
-    .send(
+    .json(
       "Error 404: Not Found. You don't have to go home, but you can't stay here."
     );
 });
