@@ -3,11 +3,16 @@ const express = require("express");
 
 // CONFIG
 const machines = express.Router();
-const machinesArray = require("../models/machine.model.js");
+const machinesData = require("../models/machine.model.js");
 
 // ROUTES
 machines.get("/", (req, res) => {
-  res.json(machinesArray);
+  res.json(machinesData);
+});
+
+// 404 PAGE
+machines.get("*", (req, res) => {
+  res.json({ error: "Sorry, no page found!" });
 });
 
 // EXPORT

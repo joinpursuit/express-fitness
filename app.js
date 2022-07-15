@@ -11,14 +11,14 @@ const app = express();
 
 // ROUTES
 app.get("/", (req, res) => {
-  res.send('Hello, world!');
+  res.send("Hello, world!");
 });
 
 app.use("/locations", locationsController);
 app.use("/machines", machinesController);
 app.use("/persons", personsController);
 app.use("/plans", plansController);
-app.use("/special-event", special_eventController);
+app.use("/special-events", special_eventController);
 
 // EXPORT
 module.exports = app;

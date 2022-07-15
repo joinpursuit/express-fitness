@@ -10,5 +10,10 @@ special_event.get("/", (req, res) => {
   res.json(special_eventData)
 })
 
+// 404 PAGE
+special_event.get("*", (req, res) => {
+  res.json({ error: "Sorry, no page found!" });
+});
+
 // EXPORT
 module.exports = special_event;
