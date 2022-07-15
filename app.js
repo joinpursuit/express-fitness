@@ -1,10 +1,11 @@
 // DEPENDENCIES
-const express = require("express");
-const locationsController     = require("./controllers/locations.controller.js");
-const machinesController      = require("./controllers/machines.controller.js");
-const personsController       = require("./controllers/persons.controller.js");
-const plansController         = require("./controllers/plans.controller.js");
-const special_eventController = require("./controllers/special-events.controller.js");
+const express = require("express"),
+      locationsController       = require("./controllers/locations.controller.js"),
+      machinesController        = require("./controllers/machines.controller.js"),
+      personsController         = require("./controllers/persons.controller.js"),
+      plansController           = require("./controllers/plans.controller.js"),
+      specialEventsController   = require("./controllers/special-events.controller.js"),
+      locationsPeopleController = require("./controllers/locations-people.controller.js");
 
 // CONFIGURATION
 const app = express();
@@ -14,11 +15,17 @@ app.get("/", (req, res) => {
   res.send("Hello, world!");
 });
 
+// app.get("/locations/people", (req, res) => {
+//   res.send("Locations/people");
+// });
+
+// CONTROLLER-ROUTES
 app.use("/locations", locationsController);
 app.use("/machines", machinesController);
 app.use("/persons", personsController);
 app.use("/plans", plansController);
-app.use("/special-events", special_eventController);
+app.use("/special-events", specialEventsController);
+app.use("/locations/people", locationsPeopleController);
 
 // EXPORT
 module.exports = app;

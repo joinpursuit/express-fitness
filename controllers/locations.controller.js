@@ -1,5 +1,7 @@
+// DEPENDENCIES
 const express = require("express");
 
+// CONFIG
 const locations = express.Router();
 const locationsData = require("../models/location.model.js");
 
@@ -13,4 +15,5 @@ locations.get("*", (req, res) => {
   res.json({ error: "Sorry, no page found!" });
 });
 
+// EXPORT
 module.exports = locations;
