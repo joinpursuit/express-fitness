@@ -4,9 +4,8 @@ const express = require("express"),
       machinesController        = require("./controllers/machines.controller.js"),
       personsController         = require("./controllers/persons.controller.js"),
       plansController           = require("./controllers/plans.controller.js"),
-      specialEventsController   = require("./controllers/special-events.controller.js"),
-      locationsPeopleController = require("./controllers/locations-people.controller.js");
-
+      specialEventsController   = require("./controllers/special-events.controller.js");
+      
 // CONFIGURATION
 const app = express();
 
@@ -16,7 +15,9 @@ app.get("/", (req, res) => {
 });
 
 app.get("/locations/people", (req, res) => {
-  res.send(app.use("/locations-people", locationsPeopleController));
+  const locationsPeopleData = require("./models/location-people.model.js");
+
+  res.json(locationsPeopleData);
 });
 
 // CONTROLLER-ROUTES
