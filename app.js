@@ -15,9 +15,9 @@ app.get("/", (req, res) => {
   res.send("Hello, world!");
 });
 
-// app.get("/locations/people", (req, res) => {
-//   res.send("Locations/people");
-// });
+app.get("/locations/people", (req, res) => {
+  res.send(app.use("/locations-people", locationsPeopleController));
+});
 
 // CONTROLLER-ROUTES
 app.use("/locations", locationsController);
@@ -25,7 +25,6 @@ app.use("/machines", machinesController);
 app.use("/persons", personsController);
 app.use("/plans", plansController);
 app.use("/special-events", specialEventsController);
-app.use("/locations/people", locationsPeopleController);
 
 // EXPORT
 module.exports = app;
