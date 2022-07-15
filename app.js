@@ -1,10 +1,10 @@
 // DEPENDENCIES
 const express = require("express"),
-      locationsController       = require("./controllers/locations.controller.js"),
-      machinesController        = require("./controllers/machines.controller.js"),
-      personsController         = require("./controllers/persons.controller.js"),
-      plansController           = require("./controllers/plans.controller.js"),
-      specialEventsController   = require("./controllers/special-events.controller.js");
+      locationsController     = require("./controllers/locations.controller.js"),
+      machinesController      = require("./controllers/machines.controller.js"),
+      personsController       = require("./controllers/persons.controller.js"),
+      plansController         = require("./controllers/plans.controller.js"),
+      specialEventsController = require("./controllers/special-events.controller.js");
       
 // CONFIGURATION
 const app = express();
