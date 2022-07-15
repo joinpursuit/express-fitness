@@ -1,35 +1,29 @@
 const express = require('express');
 const app = express();
 
-const locations = require('./models/location.model');
-const machines = require('./models/machine.model');
-const plans = require('./models/plan.model');
-const persons = require('./models/person.model');
-const specialEvents = require('./models/special-event.model');
+const locationController = require('./controllers/locations.controller');
 
-app.get('/', (req, res) => {
-  res.send('Hello, world!');
+const personController = require('./controllers/persons.controller');
+
+const planController = require('./controllers/plans.controller');
+
+const machineController = require('./controllers/machines.controller');
+
+const specialEventsController = require('./controllers/special-events.controller');
+
+app.get('/', (request, response) => {
+  response.send('Hello, world!');
 });
 
-app.get('/locations', (req, res) => {
-  res.send(locations);
-});
+app.use('/locations', locationController);
 
-app.get('/machines', (req, res) => {
-  res.send(machines);
-});
+app.use('/persons', personController);
 
-app.get('/plans', (req, res) => {
-  res.send(plans);
-});
+app.use('/plans', planController);
 
-app.get('/persons', (req, res) => {
-  res.send(persons);
-});
+app.use('/machines', machineController);
 
-app.get('/special-events', (req, res) => {
-  res.send(specialEvents);
-});
+app.use('/special-events', specialEventsController);
 
 //404 Error Page
 app.use('*', (req, res) => {
