@@ -32,7 +32,7 @@ npm test
 
 To complete this lab, you must create a series of static data models and controllers. Each of those controllers will have a single route which returns all data from the model. Read the details below carefully to ensure that you name filenames and routes correctly.
 
-### Create your file structure
+### Create your file structure [ok]
 
 Your goal is to organize your folders and files following the MVC architecture you've learned in class. Your final folder and file structure should look like this:
 
@@ -63,17 +63,17 @@ Your goal is to organize your folders and files following the MVC architecture y
 
 > **Note:** With Express, you are free to name your files and folders whatever you want. For example, when it comes to controllers you may see `locations.controllers.js` or `locations.js` or `locationsController.js`. There is no one "right way" to name these files, however it is important to have a consistent and understandable naming scheme.
 
-### Create a basic Express application
+### Create a basic Express application [ok]
 
 Install the necessary `npm` packages and then build a basic Express server.
 
-#### Generic route
+#### Generic route [ok]
 
 Create the following generic route that is not tied to any specific resource.
 
 - `GET /`: Responds with `"Hello, world!"`.
 
-### Create models
+### Create models [ok]
 
 For each model, make a folder with the appropriate file name. For example, for the `locations` resource create a file inside of the `models/` directory with the name `locations.model.js`. At this time, your model will simply be an array of data. Don't forget to export your model.
 
@@ -83,18 +83,18 @@ For each model, make a folder with the appropriate file name. For example, for t
 
 ```js
 [
-  {
-    street: "45 Davis Street",
-    city: "Long Island City",
-    state: "NY",
-    zip: "11101",
-  },
-  {
-    street: "23 Broadway",
-    city: "New York",
-    state: "NY",
-    zip: "11011",
-  },
+	{
+		street: '45 Davis Street',
+		city: 'Long Island City',
+		state: 'NY',
+		zip: '11101',
+	},
+	{
+		street: '23 Broadway',
+		city: 'New York',
+		state: 'NY',
+		zip: '11011',
+	},
 ];
 ```
 
@@ -102,24 +102,24 @@ For each model, make a folder with the appropriate file name. For example, for t
 
 ```js
 [
-  {
-    name: "Najee",
-    role: "member",
-    plan: "gold",
-    mainLocation: "11101",
-  },
-  {
-    name: "Salina",
-    role: "staff",
-    plan: "staff",
-    mainLocation: "11101",
-  },
-  {
-    name: "Amandine",
-    role: "member",
-    plan: "silver",
-    mainLocation: "10011",
-  },
+	{
+		name: 'Najee',
+		role: 'member',
+		plan: 'gold',
+		mainLocation: '11101',
+	},
+	{
+		name: 'Salina',
+		role: 'staff',
+		plan: 'staff',
+		mainLocation: '11101',
+	},
+	{
+		name: 'Amandine',
+		role: 'member',
+		plan: 'silver',
+		mainLocation: '10011',
+	},
 ];
 ```
 
@@ -127,21 +127,21 @@ For each model, make a folder with the appropriate file name. For example, for t
 
 ```js
 [
-  {
-    type: "bronze",
-    price: 100,
-    extras: [],
-  },
-  {
-    type: "silver",
-    price: 200,
-    extras: ["Laundry service", "Free smoothie each visit"],
-  },
-  {
-    type: "gold",
-    price: 300,
-    extras: ["Personal locker", "Monogrammed robe", "Sauna access"],
-  },
+	{
+		type: 'bronze',
+		price: 100,
+		extras: [],
+	},
+	{
+		type: 'silver',
+		price: 200,
+		extras: ['Laundry service', 'Free smoothie each visit'],
+	},
+	{
+		type: 'gold',
+		price: 300,
+		extras: ['Personal locker', 'Monogrammed robe', 'Sauna access'],
+	},
 ];
 ```
 
@@ -149,27 +149,27 @@ For each model, make a folder with the appropriate file name. For example, for t
 
 ```js
 [
-  {
-    brand: "Bowflex",
-    model: "Bowflexer 4000",
-    type: "Extreme Fitness Bench",
-    purchased: 1986,
-    location: 11101,
-  },
-  {
-    brand: "Bowflex",
-    model: "Bowflexer 4000",
-    type: "Extreme Fitness Bench",
-    purchased: 1996,
-    location: 11101,
-  },
-  {
-    brand: "Bowflex",
-    model: "Bowflexer 4000",
-    type: "Extreme Fitness Bench",
-    purchased: 2006,
-    location: 10011,
-  },
+	{
+		brand: 'Bowflex',
+		model: 'Bowflexer 4000',
+		type: 'Extreme Fitness Bench',
+		purchased: 1986,
+		location: 11101,
+	},
+	{
+		brand: 'Bowflex',
+		model: 'Bowflexer 4000',
+		type: 'Extreme Fitness Bench',
+		purchased: 1996,
+		location: 11101,
+	},
+	{
+		brand: 'Bowflex',
+		model: 'Bowflexer 4000',
+		type: 'Extreme Fitness Bench',
+		purchased: 2006,
+		location: 10011,
+	},
 ];
 ```
 
@@ -177,27 +177,27 @@ For each model, make a folder with the appropriate file name. For example, for t
 
 ```js
 [
-  {
-    name: "Cinco De Muscles",
-    date: "May 5, 2022",
-    description: "Attend up to 5 fitness classes in one day, no extra cost!",
-  },
-  {
-    name: "Lost Sock Memorial Day",
-    date: "May 9, 2022",
-    description:
-      "Come together as a community to honor all the lost socks that have helped us with our fitness quests. Donate a lost sock, and get a protein smoothie!",
-  },
-  {
-    name: "Hallowhoa",
-    date: "October 31, 2022",
-    description:
-      "Professional photographers will be taking photos all day. Get your photo taken and share your hard work on every social media platform you want!",
-  },
+	{
+		name: 'Cinco De Muscles',
+		date: 'May 5, 2022',
+		description: 'Attend up to 5 fitness classes in one day, no extra cost!',
+	},
+	{
+		name: 'Lost Sock Memorial Day',
+		date: 'May 9, 2022',
+		description:
+			'Come together as a community to honor all the lost socks that have helped us with our fitness quests. Donate a lost sock, and get a protein smoothie!',
+	},
+	{
+		name: 'Hallowhoa',
+		date: 'October 31, 2022',
+		description:
+			'Professional photographers will be taking photos all day. Get your photo taken and share your hard work on every social media platform you want!',
+	},
 ];
 ```
 
-### Create controllers for each model
+### Create controllers for each model [ok]
 
 Following the same file and folder structure as in class, create the correct files. For example, the `locations` resource should be in the `controllers/` directory with the name `locations.controller.js`.
 
@@ -211,49 +211,49 @@ Once you've built the route in each controller, you should be able to visit the 
 - http://localhost:3333/equipment
 - http://localhost:3333/special-events
 
-### Create a Catch-all/404 Route
+### Create a Catch-all/404 Route [ok]
 
 Add a catch-all route so that when the visited URL does not match any of the routes, a 404 response is sent. You may also wish to respond with a message for the user, such as `"Sorry, no page found!"`.
 
-## Bonuses
+## Bonuses [ok]
 
 Create a `GET` route at `/locations/people` that organizes each person according to their location. The data outputted should look like the data below.
 
 ```js
 [
-  {
-    street: "45 Davis Street",
-    city: "Long Island City",
-    state: "NY",
-    zip: "11101",
-    people: [
-      {
-        name: "Najee",
-        role: "member",
-        plan: "gold",
-        mainLocation: "11101",
-      },
-      {
-        name: "Salina",
-        role: "staff",
-        plan: "staff",
-        mainLocation: "11101",
-      },
-    ],
-  },
-  {
-    street: "23 Broadway",
-    city: "New York",
-    state: "NY",
-    zip: "11011",
-    members: [
-      {
-        name: "Amandine",
-        role: "member",
-        plan: "silver",
-        mainLocation: "10011",
-      },
-    ],
-  },
+	{
+		street: '45 Davis Street',
+		city: 'Long Island City',
+		state: 'NY',
+		zip: '11101',
+		people: [
+			{
+				name: 'Najee',
+				role: 'member',
+				plan: 'gold',
+				mainLocation: '11101',
+			},
+			{
+				name: 'Salina',
+				role: 'staff',
+				plan: 'staff',
+				mainLocation: '11101',
+			},
+		],
+	},
+	{
+		street: '23 Broadway',
+		city: 'New York',
+		state: 'NY',
+		zip: '11011',
+		members: [
+			{
+				name: 'Amandine',
+				role: 'member',
+				plan: 'silver',
+				mainLocation: '10011',
+			},
+		],
+	},
 ];
 ```
