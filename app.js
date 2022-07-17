@@ -23,7 +23,7 @@ app.use('/plans', plansController);
 const machinesController = require('./controllers/machinesController.js');
 app.use('/machines', machinesController);
 
-const specialEventsController = require('./controllers/special-eventsController.js');
+const specialEventsController = require('./controllers/specialEventsController.js');
 app.use('/special-events', specialEventsController);
 
 // 404 PAGE
