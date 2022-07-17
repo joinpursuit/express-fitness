@@ -6,3 +6,5 @@ const locationData = require("../models/location.model");
 locations.get("/", (req, res) => {
     res.json(locationData);
 })
+
+module.exports = locations;
