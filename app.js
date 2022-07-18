@@ -8,22 +8,22 @@ const app = express();
 
 // ROUTES
 app.get('/', (req, res) => {
-	res.send('Hello, World!');
+	res.send('Hello, world!');
 });
 
-const locationsController = require('./controllers/locationsController.js');
+const locationsController = require('./controllers/locations.controller.js');
 app.use('/locations', locationsController);
 
-const personsController = require('./controllers/personsController.js');
+const personsController = require('./controllers/persons.controller.js');
 app.use('/persons', personsController);
 
-const plansController = require('./controllers/plansController.js');
+const plansController = require('./controllers/plans.controller.js');
 app.use('/plans', plansController);
 
-const machinesController = require('./controllers/machinesController.js');
+const machinesController = require('./controllers/machines.controller.js');
 app.use('/machines', machinesController);
 
-const specialEventsController = require('./controllers/specialEventsController.js');
+const specialEventsController = require('./controllers/special-events.controller.js');
 app.use('/special-events', specialEventsController);
 
 // 404 PAGE
