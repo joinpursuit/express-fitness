@@ -1,29 +1,21 @@
 const express = require('express');
 const app = express();
-const locations = require('./models/location.model.js');
-const machines = require('./models/machine.model.js');
-const persons = require('./models/person.model.js');
-const plans = require('./models/plan.model.js');
-const e = require('./models/special-event.model.js');
+
+app.use(express.json());
+const locationsRoute = require('./controllers/locations.controller');
+const machinesRoute = require('./controllers/machines.controller');
+const personRoute = require('./controllers/persons.controller');
+const plansRoute = require('./controllers/plans.controller');
+const specialEventRoute = require('./controllers/special-events.controller');
 app.get('/', (request, response) => {
   response.send('Hello, world!');
 });
 
-app.get('/locations', (request, response) => {
-  response.send(locations);
-});
-app.get('/machines', (request, response) => {
-  response.send(machines);
-});
-app.get('/persons', (request, response) => {
-  response.send(persons);
-});
-app.get('/plans', (request, response) => {
-  response.send(plans);
-});
-app.get('/special-events', (request, response) => {
-  response.send(e);
-});
+app.use('/locations', locationsRoute);
+app.use('/machines', machinesRoute);
+app.use('/persons', personRoute);
+app.use('/plans', plansRoute);
+app.use('/special-events', specialEventRoute);
 
 app.use('*', (request, response) => {
   response.status(404).send('Oops something went wrong.');
